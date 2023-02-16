@@ -1,0 +1,52 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    padding:0;
+    margin:0;
+    border:0
+}
+header{
+    background-color: yellow;
+    background-image: linear-gradient(90deg, yellow 0%, black 100%);
+}
+#header-logo{
+    width:100px;
+    height:64px;
+}
+#header-msg{
+    font-size: 25px;
+    color: white;
+}
+#btnOne{
+    background-color: yellow;
+    background-image: linear-gradient(90deg, yellow 0%, black 100%);
+    color:white;
+}
+
+#btnOne:focus,#btnOne:hover{
+    box-shadow: none;
+    outline:none;
+}
+
+#tableHead{
+    background-color: yellow;
+    background-image: linear-gradient(90deg, yellow 0%, black 100%);
+}
+#searchInput{
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    border-bottom: 1px solid #ced4da;
+}
+#searchInput:hover,#searchInput:focus{
+    box-shadow: none;
+    outline:none;
+}
+.text-center{
+    position: relative;
+}
+.col-6{
+    overflow: hidden;
+    position: relative;
+}
+.w-100{
+    position: relative;
+}

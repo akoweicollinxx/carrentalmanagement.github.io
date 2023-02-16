@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="Untitled-1.css">
+    <title>Car Rental Management</title>
+</head>
+
+<body style="background-color:yellowgreen;">
+    <header class="shadow">
+        <div class="header-content d-flex justify-content-center p-2">
+            <img src="bk.PNG" alt="" id="header-logo">
+            <div id="header-msg" class="ps-3 ml-5 align-self-center">Car Rental Management</div>
+        </div>
+    </header>
+    <div class="form-container mt-5">
+        <form class="w-50 mx-auto" id="entryForm">
+            <h5 class="text-center">Add Rented Car</h5>
+            <div class="form-group">
+                <label for="owner">Name:</label>
+                <input type="text" class="form-control rounded-0 shadow-sm" id="owner" placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label for="car">Car:</label>
+                <input type="text" class="form-control rounded-0 shadow-sm" id="car" placeholder="Car">
+            </div>
+            <div class="form-group">
+                <label for="licensePlate">License Plate:</label>
+                <input type="text" class="form-control rounded-0 shadow-sm" id="licensePlate" placeholder="LL-NNN-LL....etc">
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <label for="entryDate">Pickup Date:</label>
+                    <input type="date" class="form-control rounded-0 shadow-sm" id="entryDate">
+                </div>
+                <div class="col-6">
+                    <label for="exitDate">Return Date:</label>
+                    <input type="date" class="form-control rounded-0 shadow-sm" id="exitDate">
+                </div>
+            </div>
+            <button type="submit" class="btn mx-auto d-block mt-5 rounded-0 shadow" id="btnOne">Add Car</button>
+        </form>
+    </div>
+    <div class="table-container mt-5 mb-5 w-75 mx-auto" >
+            <h5 class="text-center mb-3">List of Rented Cars</h5>
+            <input type="text" class="w-100 mb-3" id="searchInput" placeholder="Search...">
+            <table class="table table-striped shadow " id="parkingTable">
+                    <thead class="text-white" id="tableHead">
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Car</th>
+                        <th scope="col">License Plate</th>
+                        <th scope="col">Pickup Date</th>
+                        <th scope="col">Return Date</th>
+                        <th scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                     
+                    </tbody>
+                  </table>
+    </div>
+    <div class="slider"></div>
+
+    <!-- <script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+    <script>
+         const tl = new TimelineMax();
+
+        tl.fromTo('.shadow', 1,
+        {opacity:'0'},
+        {opacity:'1'},
+        1.5);
+        
+
+        tl.from('.header-content', 1,
+        {y: '-150'},
+        2
+        );
+
+        tl.fromTo( '.text-center', 1,
+        {opacity:'0'},
+        {opacity:'1'},
+         1
+        );
+
+        tl.from( '.form-group', 1,
+        {y: '-350'},
+         1
+        );
+
+        // tl.from( '.col-6', 1,
+        // {x: '100'},
+        //  1.5
+        // );
+
+        tl.fromTo('.col-6', 1,
+        {height:'0'},
+        {height:'70'},
+        2);
+        
+
+        tl.fromTo('.w-100', 1,
+        {top:'300'},
+        {top:'0'},
+        2);
+
+      
+
+        
+</script>
+</body>
+
+</html>
